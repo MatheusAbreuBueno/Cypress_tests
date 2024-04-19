@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'in-class-project/**.js'
-      - 'in-class-project/**.json'
-      - 'in-class-project/**.yml'
+      - 'CYPRESS_TESTS/**.js'
+      - 'CYPRESS_TESTS/**.json'
+      - 'CYPRESS_TESTS/**.yml'
 
 jobs:
   in-class-project-tests:
@@ -24,8 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./in-class-project
+        working-directory: ./CYPRESS_TESTS
 
       - name: Run Cypress tests
         run: npm run cypress:headless
-        working-directory: ./in-class-project
+        working-directory: ./CYPRESS_TESTS
