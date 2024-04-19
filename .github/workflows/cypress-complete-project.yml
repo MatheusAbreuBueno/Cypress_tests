@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - './**.js'
-      - './**.json'
-      - './**.yml'
+      - 'Cypress_tests/**.js'
+      - 'Cypress_tests/**.json'
+      - 'Cypress_tests/**.yml'
 
 jobs:
-  cypress_tests-tests:
+  Cypress_tests-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./cypress_tests
+        working-directory: ./Cypress_tests
 
       - name: Run Cypress tests
         run: npm run cypress:headless
-        working-directory: ./cypress_tests
+        working-directory: ./Cypress_tests
